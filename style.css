@@ -1,0 +1,329 @@
+/* ========== Dashboard Layout ========== */
+.dashboard-body {
+    display: flex;
+    background: #f5f7fa;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background: #1f1d2b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    position: fixed;
+    height: 100%;
+  }
+  
+  .sidebar .logo {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .sidebar .logo h2 {
+    font-size: 1.5rem;
+  }
+  .sidebar .logo span {
+    color: #6c63ff;
+  }
+  
+  .sidebar .nav {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar .nav li {
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .sidebar .nav li:hover,
+  .sidebar .nav li.active {
+    background: #6c63ff;
+    border-radius: 10px 0 0 10px;
+  }
+  
+  /* Main content */
+  .main-content {
+    margin-left: 250px;
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .user img {
+    width: 40px;
+    border-radius: 50%;
+  }
+  
+  /* Cards */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    color: #6c63ff;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Table */
+  .table-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .table-section h2 {
+    margin-bottom: 1rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    text-align: left;
+    padding: 12px;
+  }
+  
+  table th {
+    background: #f1f1f1;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: white;
+  }
+  .status.active {
+    background: #28a745;
+  }
+  .status.pending {
+    background: #ffc107;
+    color: #333;
+  }
+  .status.completed {
+    background: #6c63ff;
+  }
+  /* ===== Animations ===== */
+.animate-slide {
+    animation: slideIn 0.6s ease forwards;
+  }
+  
+  .animate-fade {
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  .animate-scale {
+    animation: scaleUp 0.6s ease forwards;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-40px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* ===== Mode Switch ===== */
+  #modeToggle {
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #555;
+    transition: 0.3s;
+  }
+  
+  #modeToggle:hover {
+    transform: rotate(20deg);
+    color: #6c63ff;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background: #181820;
+    color: #eaeaea;
+  }
+  
+  body.dark-mode .sidebar {
+    background: #1b1b27;
+  }
+  
+  body.dark-mode .main-content {
+    background: #181820;
+  }
+  
+  body.dark-mode .card {
+    background: #232333;
+    color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
+  }
+  
+  body.dark-mode .table-section {
+    background: #232333;
+    color: white;
+  }
+  
+  body.dark-mode table th {
+    background: #2a2a3c;
+  }
+  
+  body.dark-mode #modeToggle i {
+    color: #f8f8f8;
+  }
+/* ===== Animations ===== */
+.animate-slide {
+  animation: slideIn 0.6s ease forwards;
+}
+
+.animate-fade {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.animate-scale {
+  animation: scaleUp 0.6s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== Mode Switch ===== */
+#modeToggle {
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #555;
+  transition: 0.3s;
+}
+
+#modeToggle:hover {
+  transform: rotate(20deg);
+  color: #6c63ff;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #181820;
+  color: #eaeaea;
+}
+
+body.dark-mode .sidebar {
+  background: #1b1b27;
+}
+
+body.dark-mode .main-content {
+  background: #181820;
+}
+
+body.dark-mode .card {
+  background: #232333;
+  color: white;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+body.dark-mode .table-section {
+  background: #232333;
+  color: white;
+}
+
+body.dark-mode table th {
+  background: #2a2a3c;
+}
+
+body.dark-mode #modeToggle i {
+  color: #f8f8f8;
+}
+  
