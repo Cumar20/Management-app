@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Website Management</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="dashboard-body light-mode">
+  <div class="sidebar animate-slide">
+    <div class="logo">
+      <h2>Management <span>System</span></h2>
+    </div>
+    <ul class="nav">
+      <li class="active"><i class="fas fa-home"></i> Dashboard</li>
+      <li><i class="fas fa-folder"></i> Projects</li>
+      <li><i class="fas fa-users"></i> Users</li>
+      <li><i class="fas fa-cog"></i> Settings</li>
+      <li id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</li>
+    </ul>
+  </div>
+
+  <div class="main-content animate-fade">
+    <div class="topbar">
+      <h1>Dashboard</h1>
+      <div class="actions">
+        <button id="modeToggle"><i class="fas fa-moon"></i></button>
+        <div class="user">
+          <img src="https://i.pravatar.cc/40" alt="user" />
+          <span>Welcome 👋</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+        
+      <div class="card animate-scale">
+        <h3>Total Users</h3>
+        <p>1,245</p>
+      </div>
+      <div class="card animate-scale">
+        <h3>Active Projects</h3>
+        <p>68</p>
+      </div>git
+      <div class="card animate-scale">
+        <h3>Revenue</h3>
+        <p>$24,350</p>
+      </div>
+    </div>
+
+    <div class="table-section animate-fade">
+      <h2>Recent Projects</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Owner</th>
+            <th>Status</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Landing Page</td>
+            <td>Cumar</td>
+            <td><span class="status active">Active</span></td>
+            <td>15 Oct 2025</td>
+          </tr>
+          <tr>
+            <td>E-Learning</td>
+            <td>Ali</td>
+            <td><span class="status pending">Pending</span></td>
+            <td>13 Oct 2025</td>
+          </tr>
+          <tr>
+            <td>Portfolio</td>
+            <td>Yasir</td>
+            <td><span class="status completed">Completed</span></td>
+            <td>10 Oct 2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+</body>
+</html>
